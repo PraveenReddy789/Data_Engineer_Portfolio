@@ -142,7 +142,7 @@ button.pill{font-family:var(--bd);cursor:pointer}
 #pipe{width:100%;height:auto;color:var(--ink);overflow:visible}
 #pipe .st rect{fill:var(--chip);stroke:var(--line);stroke-width:1.5;transition:fill .25s,stroke .25s}
 #pipe .st.on rect{fill:var(--accent);stroke:var(--accent)}#pipe .st.on text{fill:#fff}
-#json{min-height:400px;max-height:400px;overflow:auto}
+#json{min-height:540px;max-height:540px;overflow:auto}
 
 #json .plsc,#json .plstt{white-space:normal}
 .plmid{min-height:360px;display:grid;place-items:center;text-align:center}.plhint{font:600 17px var(--bd);opacity:.85}
@@ -187,6 +187,42 @@ button.pill{font-family:var(--bd);cursor:pointer}
 :root[data-theme="dark"] .glow{mix-blend-mode:screen}
 .boot{position:fixed;inset:0;z-index:99;background:#0b0b0b;color:#f26a21;font:15px/1.9 ui-monospace,Menlo,Consolas,monospace;display:grid;place-items:center;transition:opacity .6s}
 .boot pre{margin:0;padding:24px;white-space:pre-wrap}.boot.out{opacity:0;pointer-events:none}
+
+.pdb{background:#f7f6f3;color:#141414;border:1px solid rgba(0,0,0,.14);border-radius:14px;padding:10px;font:13px/1.4 var(--bd);text-align:left;white-space:normal;animation:plpop .35s}
+.pdb *{box-sizing:border-box}
+.pdh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px}
+.pdh h4{margin:0;font:700 17px var(--hd);color:#141414}.pdh p{margin:2px 0 0;font-size:11.5px;color:#777}
+.pdm{display:flex;align-items:center;gap:6px;font-size:11px;color:#777;white-space:nowrap}.pdm i{width:7px;height:7px;border-radius:50%;background:#16a34a;animation:pdlive 1.6s ease-out infinite}
+@keyframes pdlive{0%{box-shadow:0 0 0 0 rgba(22,163,74,.55)}100%{box-shadow:0 0 0 7px rgba(22,163,74,0)}}
+.pdk{display:grid;grid-template-columns:repeat(auto-fit,minmax(76px,1fr));gap:5px;margin-bottom:8px}
+.pdc{position:relative;background:#fff;border:1px solid #e8e6e1;border-top:3px solid #ccc;border-radius:10px;padding:6px 7px;min-width:0}
+.pdc small{display:block;font:700 7.5px var(--bd);letter-spacing:.04em;color:#8a8a8a;text-transform:uppercase;white-space:nowrap}
+.pdc b{display:block;font:700 17px/1.2 var(--hd);margin-top:2px;color:#141414}
+.pdc span{font-size:9.5px;color:#888;white-space:nowrap}.pdc.g span{color:#2f7a3e}.pdc.r span{color:#a33b3b}
+.pdc.up b{animation:pdup 1.3s ease-out}
+.pdc em{position:absolute;top:21px;right:7px;font:700 10px var(--bd);font-style:normal;color:#16a34a;animation:pdbadge 2.6s forwards}
+@keyframes pdup{0%{color:#f26a21;transform:scale(1.14);transform-origin:left center}100%{color:#141414;transform:scale(1)}}
+@keyframes pdbadge{0%{opacity:0;transform:translateY(5px)}15%{opacity:1;transform:none}80%{opacity:1}100%{opacity:0}}
+.pdg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin-bottom:8px}
+.pdp{background:#fff;border:1px solid #e8e6e1;border-radius:10px;padding:10px;min-width:0}
+.pdp h5{margin:0;font:700 12.5px var(--hd);color:#141414}.pdp p{margin:1px 0 7px;font-size:10px;color:#888}
+.pdr{display:grid;grid-template-columns:86px 1fr 34px;align-items:center;gap:6px;font-size:10.5px;padding:1.5px 3px;border-radius:5px;color:#555}
+.pdr span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pdr b{text-align:right;color:#141414;font-weight:600}
+.pdt{height:8px;border-radius:4px;background:#f0eee9;overflow:hidden}.pdt i{display:block;height:100%;min-width:2px;border-radius:4px}
+.pdr.hl,.pds.hl{animation:pdhl 2.4s ease-out}@keyframes pdhl{0%,40%{background:rgba(242,106,33,.22)}100%{background:transparent}}
+.pdd{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.pdd svg{width:76px;height:76px;flex:none}
+.pdlg{flex:1;min-width:100px;display:flex;flex-direction:column;gap:4px}
+.pds{display:grid;grid-template-columns:8px 1fr auto auto;align-items:center;gap:6px;font-size:11px;padding:3px 6px;border-radius:6px;background:#f6f4ef}
+.pds i{width:8px;height:8px;border-radius:50%}.pds b{font-size:11px}.pds small{font-size:10px;color:#888}
+.pdl{background:#fff;border:1px solid #e8e6e1;border-radius:10px;padding:9px 10px;animation:plpop .4s}
+.pdl h5{margin:0 0 6px;font:700 10px var(--bd);letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;display:flex;justify-content:space-between}
+.pdl h5 em{font-style:normal;color:#16a34a;letter-spacing:0;text-transform:none}
+.pdl.wait{border-style:dashed;background:transparent}.pdl .ph{color:#999;font-size:12px}
+.pdlr{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11.5px}.pdlr>b{font:700 12px ui-monospace,Menlo,monospace;margin-right:2px}
+.ch{background:#f0eee9;border-radius:99px;padding:2px 9px;font-size:11px;font-weight:600;color:#333}.ch small{font-weight:500;opacity:.75}
+.ch.positive{background:#e4f3e7;color:#2f8a3e}.ch.neutral{background:#fbefe0;color:#b4691b}.ch.negative{background:#fbe5e4;color:#c53030}
+.pdlr .am{color:#666;margin-left:auto}
+@media (prefers-reduced-motion:reduce){.pdb *{animation:none!important}}
 @media (max-width:820px){
 .labgrid{grid-template-columns:1fr}}
 </style>
@@ -232,13 +268,10 @@ button.pill{font-family:var(--bd);cursor:pointer}
 <p class="sub">Interactive walkthroughs of three real systems I have built: the Kafka and LLM call-extraction pipeline, the Samvaad voice agent and the Text-to-SQL analytics chatbot. These are scaled-down versions that run right here, so click around. All data shown is made up.</p>
 <div class="labgrid">
 <div class="panel"><h3>A voice call becomes structured data</h3>
-<svg id="pipe" viewBox="0 0 640 130" role="img" aria-label="Pipeline: call, Kafka, LLM extraction, PostgreSQL">
-<g id="lines" stroke="currentColor" stroke-opacity=".25" stroke-width="2"><path d="M110 55H190M270 55H350M430 55H510"/></g>
+<svg id="pipe" viewBox="0 0 680 130" role="img" aria-label="Pipeline: call, Kafka, LLM extraction, PostgreSQL, stakeholder dashboard">
+<g id="lines" stroke="currentColor" stroke-opacity=".25" stroke-width="2"><path d="M100 55H150M230 55H280M360 55H410M510 55H560"/></g>
 <g font-family="Outfit,Arial,sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="currentColor">
-<g class="st" data-i="0"><rect x="30" y="25" width="80" height="60" rx="16"/><text x="70" y="60">Call</text><g class="pltk"><circle cx="110" cy="25" r="11" fill="#16a34a"/><path d="M105 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
-<g class="st" data-i="1"><rect x="190" y="25" width="80" height="60" rx="16"/><text x="230" y="60">Kafka</text><g class="pltk"><circle cx="270" cy="25" r="11" fill="#16a34a"/><path d="M265 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
-<g class="st" data-i="2"><rect x="350" y="25" width="80" height="60" rx="16"/><text x="390" y="60">LLM</text><g class="pltk"><circle cx="430" cy="25" r="11" fill="#16a34a"/><path d="M425 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
-<g class="st" data-i="3"><rect x="510" y="25" width="100" height="60" rx="16"/><text x="560" y="60">PostgreSQL</text><g class="pltk"><circle cx="610" cy="25" r="11" fill="#16a34a"/><path d="M605 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
+<g class="st" data-i="0"><rect x="20" y="25" width="80" height="60" rx="16"/><text x="60" y="60">Call</text><g class="pltk"><circle cx="100" cy="25" r="11" fill="#16a34a"/><path d="M95 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="st" data-i="1"><rect x="150" y="25" width="80" height="60" rx="16"/><text x="190" y="60">Kafka</text><g class="pltk"><circle cx="230" cy="25" r="11" fill="#16a34a"/><path d="M225 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="st" data-i="2"><rect x="280" y="25" width="80" height="60" rx="16"/><text x="320" y="60">LLM</text><g class="pltk"><circle cx="360" cy="25" r="11" fill="#16a34a"/><path d="M355 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="st" data-i="3"><rect x="410" y="25" width="100" height="60" rx="16"/><text x="460" y="60">PostgreSQL</text><g class="pltk"><circle cx="510" cy="25" r="11" fill="#16a34a"/><path d="M505 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g><g class="st" data-i="4"><rect x="560" y="25" width="100" height="60" rx="16"/><text x="610" y="60">Dashboard</text><g class="pltk"><circle cx="660" cy="25" r="11" fill="#16a34a"/><path d="M655 25l4 4 6-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
 <g id="pk"></g></svg>
 <div class="pllg" id="pllg" role="group" aria-label="Call language"><span>Call language:</span><button class="on" data-l="en" type="button">English</button><button data-l="ta" type="button">Tamil</button><button data-l="te" type="button">Telugu</button><button data-l="ml" type="button">Malayalam</button><button data-l="gu" type="button">Gujarati</button><button data-l="or" type="button">Odia</button><button data-l="kn" type="button">Kannada</button></div>
 <div class="code" id="json" aria-live="polite"></div>
@@ -376,13 +409,26 @@ gu:['નમસ્તે, હું સંવાદમાંથી બોલુ�
 or:['ନମସ୍କାର, ମୁଁ ସଂବାଦରୁ କହୁଛି, ଆପଣଙ୍କ ଲୋନ୍ EMI ବିଷୟରେ।','ହଁ, କୁହନ୍ତୁ।','ଆପଣଙ୍କ ₹12,500 EMI ସେପ୍ଟେମ୍ବର 20 ରେ ଦେୟ ଥିଲା।','ହଁ, ଏହି ମାସ ଦରମା ଡେରିରେ ଆସିଲା।','ବୁଝିଲି। ଆପଣ କେବେ ଦେଇପାରିବେ?','ଅକ୍ଟୋବର 7 ସୁଦ୍ଧା ₹4,500 ଦେବି।','ଧନ୍ୟବାଦ। ଅକ୍ଟୋବର 7 ସୁଦ୍ଧା ₹4,500 ଲେଖିନେଲି।','ଠିକ୍ ଅଛି, ଧନ୍ୟବାଦ।'],
 kn:['ನಮಸ್ಕಾರ, ನಾನು ಸಂವಾದ್‌ನಿಂದ ಕರೆ ಮಾಡುತ್ತಿದ್ದೇನೆ, ನಿಮ್ಮ ಸಾಲದ EMI ಬಗ್ಗೆ.','ಹೌದು, ಹೇಳಿ.','ನಿಮ್ಮ ₹12,500 EMI ಸೆಪ್ಟೆಂಬರ್ 20 ರಂದು ಪಾವತಿಸಬೇಕಿತ್ತು.','ಹೌದು, ಈ ತಿಂಗಳು ಸಂಬಳ ತಡವಾಗಿ ಬಂತು.','ಅರ್ಥವಾಯಿತು. ನೀವು ಯಾವಾಗ ಪಾವತಿಸಬಹುದು?','ಅಕ್ಟೋಬರ್ 7 ರೊಳಗೆ ₹4,500 ಪಾವತಿಸುತ್ತೇನೆ.','ಧನ್ಯವಾದಗಳು. ಅಕ್ಟೋಬರ್ 7 ರೊಳಗೆ ₹4,500 ಎಂದು ದಾಖಲಿಸಿದ್ದೇನೆ.','ಸರಿ, ಧನ್ಯವಾದಗಳು.']};
 var PNM={en:'English',ta:'Tamil',te:'Telugu',ml:'Malayalam',gu:'Gujarati',or:'Odia',kn:'Kannada'},pcur='en';
-var jn=document.getElementById('json'),evn=document.getElementById('ev'),ib=document.getElementById('inject'),pl=document.getElementById('pllg'),sts=document.querySelectorAll('#pipe .st'),cnt=0,typer,running=false;
+var jn=document.getElementById('json'),evn=document.getElementById('ev'),ib=document.getElementById('inject'),pl=document.getElementById('pllg'),sts=document.querySelectorAll('#pipe .st'),cnt=0,typer,dt,running=false;
 function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
 function st(i,c,on){sts[i].classList[on?'add':'remove'](c)}
-function pidle(){clearInterval(typer);sts.forEach(function(g){g.classList.remove('on','vib','done')});jn.innerHTML='<div class="plsc plmid"><div class="plhint">Click on "Ingest call" to make a call</div></div>'}
+function pidle(){clearInterval(typer);clearTimeout(dt);sts.forEach(function(g){g.classList.remove('on','vib','done')});jn.innerHTML='<div class="plsc plmid"><div class="plhint">Click on "Ingest call" to make a call</div></div>'}
 function csvq(v){v=v===null?'':String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
 function fin(i){st(i,'vib',0);st(i,'on',0);st(i,'done',1)}
 function tr(a){return a.map(function(t,i){return(i%2?'User: ':'Agent: ')+t}).join('\n')}
+var DB={t:13886,a:5193,u:8693,p:417},DO=[['No Resolution',2210,'#7a97b5'],['Call Dropped',1856,'#7fae93'],['Promise to Pay',417,'#c47a72'],['Language Barrier',152,'#cdb06d'],['Voicemail Left',131,'#86b0c4'],['Wrong Person',98,'#d97eb0']],DS=[['Neutral',4338,'#d99a56','#c0701f'],['Negative',564,'#d65f5a','#c53030'],['Positive',291,'#6bb274','#2f8a3e']],SB={cooperative:'Positive',neutral:'Neutral',hostile:'Negative'};
+function fm(n){return n.toLocaleString('en-US')}
+function pc(x,y){return Math.round(100*x/y)}
+function dashHTML(k,fl,show,d){
+var sb=SB[d.sentiment]||'Neutral',pt=d.intent==='promise_to_pay'?1:0,a=DB.a+k,u=DB.u,t=DB.t+k,p=DB.p+k*pt,
+o=DO.map(function(r){return r[1]+(r[0]==='Promise to Pay'?k*pt:0)}),s=DS.map(function(r){return r[1]+(r[0]===sb?k:0)}),sum=s[0]+s[1]+s[2],mx=o[0];
+function kc(lab,val,sub,cls,col,ch){var f=ch&&fl;return '<div class="pdc '+cls+(f?' up':'')+'" style="border-top-color:'+col+'"><small>'+lab+'</small><b>'+val+'</b><span>'+sub+'</span>'+(f?'<em>+1</em>':'')+'</div>'}
+var kp=kc('Total calls',fm(t),fm(a)+' + '+fm(u),'','#6f93c4',1)+kc('Answered',fm(a),pc(a,t)+'% of total','g','#5aa671',1)+kc('Unanswered',fm(u),pc(u,t)+'% of total','r','#c9605b',0)+kc('Promise to pay',fm(p),pc(p,a)+'% of answered','','#d49a52',pt)+kc('Avg duration','28s','per answered call','','#7fa7c9',0);
+var br=DO.map(function(r,i){return '<div class="pdr'+(fl&&i===2&&pt?' hl':'')+'"><span>'+r[0]+'</span><div class="pdt"><i style="width:'+(o[i]/mx*100)+'%;background:'+r[2]+'"></i></div><b>'+fm(o[i])+'</b></div>'}).join('');
+var C=213.63,ac=0,cs=DS.map(function(r,i){var L=s[i]/sum*C,c='<circle cx="50" cy="50" r="34" fill="none" stroke="'+r[2]+'" stroke-width="14" stroke-dasharray="'+L.toFixed(2)+' '+(C-L).toFixed(2)+'" stroke-dashoffset="'+(-ac).toFixed(2)+'" transform="rotate(-90 50 50)"/>';ac+=L;return c}).join('');
+var lg=DS.map(function(r,i){return '<div class="pds'+(fl&&r[0]===sb?' hl':'')+'"><i style="background:'+r[2]+'"></i><span>'+r[0]+'</span><b style="color:'+r[3]+'">'+pc(s[i],sum)+'%</b><small>'+fm(s[i])+'</small></div>'}).join('');
+var last=show?'<div class="pdl"><h5>Latest call ingested<em>just now</em></h5><div class="pdlr"><b>'+d.id+'</b><span class="ch">'+d.language+'</span><span class="ch">'+d.intent+'</span><span class="ch '+sb.toLowerCase()+'">&#9679; '+sb+' <small>('+d.sentiment+')</small></span><span class="am">'+d.promised_amount+' by '+d.follow_up+'</span></div></div>':'<div class="pdl wait"><h5>Latest call ingested</h5><div class="pdlr"><span class="ph">Syncing from PostgreSQL...</span></div></div>';
+return '<div class="pdh"><div><h4>Overview</h4><p>Today&#39;s voice bot performance</p></div><div class="pdm"><i></i>Live &middot; '+(show?'updated just now':'updated 11s ago')+'</div></div><div class="pdk">'+kp+'</div><div class="pdg"><div class="pdp"><h5>Call Outcomes</h5><p>Distribution for 2026-10-02</p>'+br+'</div><div class="pdp"><h5>Sentiment</h5><p>Of answered calls</p><div class="pdd"><svg viewBox="0 0 100 100" aria-hidden="true">'+cs+'</svg><div class="pdlg">'+lg+'</div></div></div></div>'+last}
 pl.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||running)return;pcur=b.dataset.l;pl.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)})});
 async function run(){if(running)return;running=true;ib.disabled=true;pl.querySelectorAll('button').forEach(function(x){x.disabled=true});pidle();
 try{var en=pcur==='en',lines=en?PE:PN[pcur],d={id:'c_'+(48213+cnt),language:PNM[pcur],intent:'promise_to_pay',sentiment:'cooperative',promised_amount:'INR 4,500',follow_up:'2026-10-07',dispute:false,callback_requested:false,reason_for_non_payment:'salary_delayed',summary:'Customer confirmed the EMI is overdue because the salary came late and promised INR 4,500 by 7 October.',transcript:tr(lines)};
@@ -402,14 +448,16 @@ for(var q=0;q<lines.length;q++){var tl=document.createElement('div');tl.classNam
 await sleep(500);fin(2);
 st(3,'on',1);st(3,'vib',1);jn.innerHTML='<div class="plsc"><svg class="plbin" width="160" height="150" viewBox="0 0 160 150" aria-hidden="true"><g class="cd"><rect x="62" y="20" width="36" height="28" rx="5" fill="#f26a21"/><text x="80" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#fff" font-family="ui-monospace,monospace">{ }</text></g><g fill="none" stroke="#fff" stroke-width="2.5" opacity=".85"><ellipse cx="80" cy="96" rx="44" ry="12"/><path d="M36 96v28c0 7 20 13 44 13s44-6 44-13V96"/><path d="M36 110c0 7 20 13 44 13s44-6 44-13" opacity=".5"/></g></svg><div class="plstt">Storing the record in PostgreSQL...</div></div>';
 await sleep(2400);fin(3);cnt++;evn.textContent=cnt;
+st(4,'on',1);st(4,'vib',1);jn.innerHTML='<div class="plsc plmid"><div class="plstt"><span class="plspin"></span>Refreshing the stakeholder dashboard...</div></div>';await sleep(1700);fin(4);
 var ks=Object.keys(d),csv=ks.join(',')+'\n'+ks.map(function(k){return csvq(d[k])}).join(','),js=JSON.stringify(d,null,2);
-jn.innerHTML='<div class="plsc"><div class="plstt ok">&#10003; Stored in PostgreSQL, calls table</div><div class="plvw" id="plvw"><button class="on" data-v="j" type="button">JSON</button><button data-v="c" type="button">CSV table</button><button data-v="d" type="button">Download CSV &#8595;</button></div><div id="plout"></div></div>';
+jn.innerHTML='<div class="plsc"><div class="plstt ok">&#10003; Stored in PostgreSQL &nbsp;&rarr;&nbsp; &#10003; Live on dashboard</div><div class="plvw" id="plvw"><button class="on" data-v="b" type="button">Dashboard</button><button data-v="j" type="button">JSON</button><button data-v="c" type="button">CSV table</button><button data-v="d" type="button">Download CSV &#8595;</button></div><div id="plout"></div></div>';
 var out=document.getElementById('plout'),vw=document.getElementById('plvw');
-function showJ(){clearInterval(typer);out.innerHTML='<pre class="pljs" id="pljs"></pre>';var pj=document.getElementById('pljs'),z=0;typer=setInterval(function(){z+=14;pj.textContent=js.slice(0,z);if(z>=js.length)clearInterval(typer)},14)}
-function showC(){clearInterval(typer);var h='<div class="pltb"><table><tr>'+ks.map(function(k){return'<th>'+k+'</th>'}).join('')+'</tr><tr>'+ks.map(function(k){var v=d[k];return'<td'+(/transcript/.test(k)?' class="wd"':'')+'></td>'}).join('')+'</tr></table></div>';out.innerHTML=h;var tds=out.querySelectorAll('td');ks.forEach(function(k,i){tds[i].textContent=d[k]===null?'':String(d[k])})}
+function showJ(){clearInterval(typer);clearTimeout(dt);out.innerHTML='<pre class="pljs" id="pljs"></pre>';var pj=document.getElementById('pljs'),z=0;typer=setInterval(function(){z+=14;pj.textContent=js.slice(0,z);if(z>=js.length)clearInterval(typer)},14)}
+function showC(){clearInterval(typer);clearTimeout(dt);var h='<div class="pltb"><table><tr>'+ks.map(function(k){return'<th>'+k+'</th>'}).join('')+'</tr><tr>'+ks.map(function(k){var v=d[k];return'<td'+(/transcript/.test(k)?' class="wd"':'')+'></td>'}).join('')+'</tr></table></div>';out.innerHTML=h;var tds=out.querySelectorAll('td');ks.forEach(function(k,i){tds[i].textContent=d[k]===null?'':String(d[k])})}
+function showD(an){clearInterval(typer);clearTimeout(dt);out.innerHTML='<div class="pdb" id="pdb"></div>';var bx=document.getElementById('pdb');if(an){bx.innerHTML=dashHTML(cnt-1,false,false,d);dt=setTimeout(function(){bx.innerHTML=dashHTML(cnt,true,true,d)},1100)}else bx.innerHTML=dashHTML(cnt,false,true,d);jn.scrollTop=0}
 function dl(){var bl=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='call_'+d.id+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},1000)}
-vw.addEventListener('click',function(e){var bt=e.target.closest('button');if(!bt)return;var v=bt.dataset.v;if(v==='d'){dl();return}vw.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===bt)});if(v==='j')showJ();else showC()});
-showJ()
+vw.addEventListener('click',function(e){var bt=e.target.closest('button');if(!bt)return;var v=bt.dataset.v;if(v==='d'){dl();return}vw.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===bt)});if(v==='b')showD(false);else if(v==='j')showJ();else showC()});
+showD(true)
 }finally{ib.disabled=false;running=false;pl.querySelectorAll('button').forEach(function(x){x.disabled=false})}}
 ib.addEventListener('click',run);pidle();
 /* text-to-sql demo */
